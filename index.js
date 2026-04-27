@@ -6,7 +6,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 // 🔐 COLOQUE SUA URL AQUI
-const mongoURL = "mongodb+srv://kauehsd:292721@cluster0.nptuecd.mongodb.net/tarefas";
+const mongoURL = process.env.MONGO_URL;
 // Middleware CORS
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
